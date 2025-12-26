@@ -1,15 +1,18 @@
 # ha-operator
-// TODO(user): Add simple overview of use/purpose
+
+A Kubernetes operator for managing highly available applications with automated failover, health monitoring, and resource management.
 
 ## Description
-// TODO(user): An in-depth paragraph about your project and overview of use
+
+The HighAvailabilityApp operator provides a declarative way to deploy and manage applications on Kubernetes with built-in high availability features. It automates failover, health checks, and replica management to ensure your applications remain available and resilient. Define your application requirements once using the HighAvailabilityApp CRD, and the operator handles the rest.
 
 ## Getting Started
 
 ### Prerequisites
-- go version v1.24.6+
+- go version v1.25.5+
 - docker version 17.03+.
 - kubectl version v1.11.3+.
+- k3d or Kind (for local Kubernetes cluster).
 - Access to a Kubernetes v1.11.3+ cluster.
 
 ### To Deploy on the cluster
@@ -111,7 +114,13 @@ previously added to 'dist/chart/values.yaml' or 'dist/chart/manager/manager.yaml
 is manually re-applied afterwards.
 
 ## Contributing
-// TODO(user): Add detailed information on how you would like others to contribute to this project
+
+Contributions are welcome! Please feel free to submit issues and pull requests. When contributing:
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes and add tests
+4. Run `make test` to validate changes
+5. Submit a pull request with a clear description
 
 **NOTE:** Run `make help` for more information on all potential `make` targets
 

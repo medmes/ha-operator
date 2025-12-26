@@ -1,6 +1,6 @@
 {
   "name": "Kubebuilder DevContainer",
-  "image": "golang:1.24",
+  "image": "golang:1.25.5",
   "features": {
     "ghcr.io/devcontainers/features/docker-in-docker:2": {},
     "ghcr.io/devcontainers/features/git:1": {}
@@ -14,12 +14,15 @@
         "terminal.integrated.shell.linux": "/bin/bash"
       },
       "extensions": [
+        "golang.go",
         "ms-kubernetes-tools.vscode-kubernetes-tools",
-        "ms-azuretools.vscode-docker"
+        "ms-azuretools.vscode-docker",
+        "ms-vscode.makefile-tools"
       ]
     }
   },
 
-  "onCreateCommand": "bash .devcontainer/post-install.sh"
+  "onCreateCommand": "bash .devcontainer/post-install.sh",
+  "postStartCommand": "go mod download"
 }
 
